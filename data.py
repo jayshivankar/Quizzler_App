@@ -6,7 +6,7 @@ parameters={
 
 response=requests.get("https://opentdb.com/api.php?amount=10&type=boolean",params=parameters)
 data=response.json()
-print(data)
+question_data=data["results"]
 
 
 
