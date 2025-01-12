@@ -8,8 +8,6 @@ response=requests.get("https://opentdb.com/api.php?amount=10&type=boolean",param
 data=response.json()
 question_data=data["results"]
 
-
-
 # question_data = [
 #     {
 #         "category": "Science: Computers",
