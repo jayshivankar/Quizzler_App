@@ -1,44 +1,40 @@
-Main Features
-The application displays a trivia statement and the user has to guess if it is true by click on the green √ button, or false by clicking on the red x button.
 
-If the user guesses correctly, the screen will flash green for 1 second, add a point to the user's score, and then advance to the next question.
+Summary
+The app creates a quiz interface using Tkinter and utilizes the Open Trivia Database API to present trivia questions to users. Users can guess whether a statement is true or false, with the app providing immediate feedback and tracking scores.
 
-Usage & Requirements
-This project uses three libraries/packages:
+Key Points
+Project Title: Quizzler Application
 
-TkInter
-requests
-html
-And uses 3 classes:
+Technology Stack:
 
-Interface
-QuizBrain
-Question
-And one data file:
+Language: Python (version 3.11)
+Libraries Used:
+Tkinter (for GUI)
+Requests (for API calls)
+HTML (for rendering)
+Core Components:
 
-data.py
-Workflow
-We first make a call to the Open Trivia Database API to retrieve the trivia questions by importing the data.py file into main.py:
-from data import question_data
-The data.py file call makes a requests.get() call to the API, converts the result to JSON, and then returns the data that we need to start the game:
+Data File: data.py
+Main Application Logic: main.py
+Classes:
+Question: Represents a trivia question.
+QuizBrain: Handles the logic of the quiz.
+Interface: Manages the user interface.
+Functionality:
 
-def get_trivia_bank():
-    response = requests.get(url="https://opentdb.com/api.php", params=params)
-    response.raise_for_status()
-    data = response.json()
-    return data['results']
+Fetches trivia questions from the Open Trivia Database API.
+Displays each question with two buttons for the user to guess True or False.
+Feedback is provided based on the user's input:
+Correct guesses result in a score increase and a green flash.
+Incorrect guesses result in a red flash.
+Concludes when all questions are answered, with a final message displayed.
+Usage Instructions:
+
+Clone the repository from GitHub.
+Open the project in an IDE like PyCharm.
+Install required packages (e.g., requests) as needed.
+Run the app.
 
 
-question_data = get_trivia_bank()
-Next we sort through the question bank and pull only the data we need (the question text and the correct answer), storing it in a list:
 
-question_bank = []
-for question in question_data:
-    question_text = question["question"]
-    question_answer = question["correct_answer"]
-    new_question = Question(question_text, question_answer)
-    question_bank.append(new_question)
-Lastly we send the filtered question data to the QuizBrain and start the Interface to begin the game:
-
-quiz = QuizBrain(question_bank)
-quiz_ui = Interface(quiz)
+This summary encapsulates the primary details and functionality of the project, making it easier to understand its purpose and structure.
