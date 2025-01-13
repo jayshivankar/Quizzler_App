@@ -1,29 +1,45 @@
-Quizzler App
-
+# Quizzler App
 
 Quizzler is a simple, interactive quiz application built with Python. The app allows users to test their knowledge across various topics by answering true/false questions. The application provides immediate feedback on each answer and tracks the user's score.
 
-Features
-Interactive Gameplay: Answer true/false questions with immediate feedback.
-Dynamic Questions: Questions are fetched dynamically from an external API for variety.
-Score Tracking: Keeps track of the user’s score as they progress through the quiz.
-User-Friendly Interface: Simple and intuitive interface for seamless interaction.
-Technologies Used
-Python: Core programming language.
-Tkinter: For creating the graphical user interface (GUI).
-Open Trivia Database (OpenTDB): Used to fetch quiz questions via API.
-Getting Started
-Prerequisites
-Python 3.x installed on your system.
-Installation
-Clone the repository:
+---
 
-bash
-Copy code
-git clone https://github.com/your-username/quizzler-app.git
-cd quizzler-app
+## Features
+
+- **Interactive Gameplay**: Answer true/false questions with immediate feedback.
+- **Dynamic Questions**: Questions are fetched dynamically from an external API for variety.
+- **Score Tracking**: Keeps track of the user’s score as they progress through the quiz.
+- **User-Friendly Interface**: Simple and intuitive interface for seamless interaction.
+
+---
+
+## Technologies Used
+
+- **Python**: Core programming language.
+- **Tkinter**: For creating the graphical user interface (GUI).
+- **Open Trivia Database (OpenTDB)**: Used to fetch quiz questions via API.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x installed on your system.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/quizzler-app.git
+   cd quizzler-app
+  ### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/quizzler-app.git
+   cd quizzler-app
 Install the required dependencies:
-
 bash
 Copy code
 pip install -r requirements.txt
@@ -55,3 +71,5 @@ Fork the repository.
 Create a new branch for your feature/bug fix.
 Commit your changes and push them to your fork.
 Submit a pull request with a detailed description of the changes.
+
+
